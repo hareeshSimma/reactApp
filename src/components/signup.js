@@ -1,7 +1,13 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import React, { Component } from 'react';
+//import logo from './logo.svg';
+import '../App.css';
 
-
+export default class Signup extends React.Component {
+    render() {
+        return(
+                <div>
+                <h1>Hello Signup</h1>
+                </div>
+                )
+    }
+}
