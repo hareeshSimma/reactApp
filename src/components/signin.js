@@ -1,9 +1,7 @@
 import React from 'react';
 import '../App.css';
 import $ from 'jquery'; 
-//import { browserHistory } from 'react-router';
-//import {Navigation} from 'react-router';
-
+import {Route,DefaultRoute, RouteHandler} from 'react-router';
 class Signin extends React.Component  {
      arr;
  constructor(props) {
@@ -45,19 +43,18 @@ class Signin extends React.Component  {
         url: 'http://localhost:8080/users/authenticate',
         data: data
       }) .done((data) => {
-        console.log("Success");
+        console.log("login Success....");
         console.log(data);
-       
+       this.props.history.push('/home');
        this.arr.push(data);
         // this.getdata();
        this.setState({userDeatils:this.arr});
          console.log(this.state.userDeatils);
-        
-        //window.location='/home';
-        // self.clearForm()
+     
       })
       .fail(function(jqXhr) {
         console.log('failed to login');
+this.props.history.push('/login');
       });
       
       console.log('form is valid: submit');

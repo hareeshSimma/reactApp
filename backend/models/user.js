@@ -54,7 +54,7 @@ module.exports.addUser = function(newuser, callback) {
             }
             newuser.pwd = hash;
             newuser.save(callback);
-            console.log(callback);
+            
         });
     });
 }

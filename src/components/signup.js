@@ -3,9 +3,11 @@ from 'react';
 //import logo from './logo.svg';
 import '../App.css';
 import $ from 'jquery';
-import { browserHistory, Link ,Route} from 'react-router';
+import { browserHistory, Link ,Route,DefaultRoute, RouteHandler} from 'react-router';
+//var Router = require('react-router');
 
 export default class Signup extends React.Component {
+       
      constructor(context,props){
         super(context,props);
         this.state = {
@@ -124,12 +126,11 @@ export default class Signup extends React.Component {
             data: data
           })
           .done((data) => {
-            console.log("Success");
+            console.log("Register successfully......");
+            alert("Register successfully......")
             console.log(data);
-           
-         this.context.router.transitionTo('/login');
-            //this.transitionTo('/login')
-           
+        
+        this.props.history.push('/login');
           })
           .fail(function(jqXhr) {
             console.log('failed to register');
@@ -138,7 +139,7 @@ export default class Signup extends React.Component {
           console.log('form is valid: submit');
         }
     }
-
+ 
     render() {
         return (
             <div>
