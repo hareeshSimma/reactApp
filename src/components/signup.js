@@ -1,9 +1,8 @@
-import React, { Component }
-from 'react';
+import React, { Component } from 'react';
 //import logo from './logo.svg';
 import '../App.css';
 import $ from 'jquery';
-import { browserHistory, Link ,Route,DefaultRoute, RouteHandler} from 'react-router';
+import {Route,DefaultRoute, RouteHandler} from 'react-router';
 //var Router = require('react-router');
 
 export default class Signup extends React.Component {

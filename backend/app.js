@@ -21,6 +21,8 @@ mongoose.connection.on('error', (err) => {
 
 const app = express();
 
+//use router module
+
 const users = require('./routes/users');
 //port number
 const port = 8080;
@@ -35,6 +37,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
+
+//passpor config file
 
 require('./config/passport')(passport);
 
